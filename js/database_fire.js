@@ -23,4 +23,10 @@ getCollection('/users')
     });
 
 
-setDataForUser(2, {'City': 'hier'});
+setDataForUser(2, {
+    accounts: {
+        ing: {
+            balance: 77
+        }
+    }
+});
