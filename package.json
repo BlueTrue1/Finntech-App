@@ -4,6 +4,7 @@
   "description": "Vu_project",
   "main": "index.js",
   "dependencies": {
+    "@mdi/font": "^2.7.94",
     "semantic-ui": "^2.3.3"
   },
   "devDependencies": {},

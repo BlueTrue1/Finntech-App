@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>Title</title>
 	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 	<script
@@ -9,8 +10,523 @@
 			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 			crossorigin="anonymous"></script>
 	<script src="semantic/dist/semantic.min.js"></script>
+	<script src="js/functions.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		  rel="stylesheet">
 </head>
 <body>
-udykuy
+
+
+	<div class="ui row bg-basic-3 materialize-1">
+		<div class="sixteen wide computer six wide mobile column">
+			<div class="ui secondary pointing menu container" style="margin: 0; padding: 12px 0; border: 0;">
+					<a class="ui item text-24px">
+						Welkom Piet!
+					</a>
+				<div class="right menu">
+
+					<div class="ui item text-24px hover">
+						<div class="text-center bg-yl br-4 p-12 text-16px hover materialize-1 ui popopo" style="float:right">Upload your App!
+						</div>
+						<div class="ui  popup" data-content="something" style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;">
+							<div class="header">
+								<div class="ui grid">
+									<div class="row">
+										<div class="column">
+											<p class="text-16px width-300">Insert here your Application to add it to our database</p>
+											<label for="appName"><input id="appName" name="appName" class="text p-6" placeholder="Application Name" style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;"></label>
+											<label for="embedCode"><input id="embedCode" name="embedCode" class="text p-6 mt-12" placeholder="Embedded Code/Iframe" style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;"></label>
+											<p class="text-16px mt-12">Do you want your app to connect with our API?</p>
+											<label class="mr-6">No</label><input type="checkbox">
+											<label class="mr-6">Yess</label><input type="checkbox">
+											<button class="ui button green mt-10 width-82" style="float: right">Add!</button>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+						<img src="assets/ABN.png" alt="" class="height-82">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui grid height-48 bg-b materialize-1">
+			<div class="ui container">
+				<div class="six wide computer sixteen wide mobile column">
+					<div class="ui accordion">
+						<div class="title pt-12">
+							Sign in with another account
+						</div>
+
+						<div class="content pull-over layer-1" style="overflow: visible;">
+							<form class="ui form segment">
+								<p>Tell Us About Yourself</p>
+								<div class="two fields">
+									<div class="field">
+										<label>Name</label>
+										<input placeholder="First Name" name="name" type="text">
+									</div>
+									<div class="field">
+										<label>Gender</label>
+										<select class="ui dropdown" name="gender">
+											<option value="">Gender</option>
+											<option value="male">Male</option>
+											<option value="female">Female</option>
+										</select>
+									</div>
+								</div>
+								<div class="two fields">
+									<div class="field">
+										<label>Username</label>
+										<input placeholder="Username" name="username" type="text">
+									</div>
+									<div class="field">
+										<label>Password</label>
+										<input type="password" name="password">
+									</div>
+								</div>
+								<div class="field">
+									<label>Banks</label>
+									<select name="skills" multiple="" class="ui dropdown height-82">
+										<option value="">Select Skills</option>
+										<option value="css">ABN AMRO</option>
+										<option value="html">ING</option>
+										<option value="javascript">SNS BANK</option>
+										<option value="design">VAN LANSCHOT</option>
+									</select>
+								</div>
+								<div class="inline field">
+									<div class="ui checkbox">
+										<input type="checkbox" name="terms">
+										<label>I agree to the terms and conditions</label>
+									</div>
+								</div>
+								<div class="ui primary submit button">Submit</div>
+								<div class="ui error message"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<div class="ui grid mt-12 container">
+	<div class="four wide computer sixteen wide mobile column">
+		<div class="ui vertical fluid menu text-18px">
+			<a class="item active">
+				<i class="material-icons mr-12" style="float: left">dashboard</i>
+				<p class="text-18px weight-bold">  My Dashboard </p>
+			</a>
+			<a class="item" href="pages/appsToConnect.html">
+				<i class="material-icons mr-12" style="float: left">touch_app</i>
+				<p class="text-18px">  Apps to Connect </p>
+			</a>
+			<a class="item"  href="pages/allApps.html">
+
+				<i class="material-icons mr-12" style="float: left">apps</i>
+				<p class="text-18px">  All Apps </p>
+			</a>
+		</div>
+	</div>
+
+	<div class="six wide computer sixteen wide mobile stretched column dashboardColumn mb-48">
+		<div class="p-18 bg-basic-1 materialize-1 text-18px" style="overflow: hidden;">
+			<h3>ABN</h3>
+			<div class="statistic">
+				<div class="value">
+					<div class="ui grid">
+						<div class="row">
+							<div class="ten wide column">
+								Netto Balance:
+							</div>
+							<div class="six wide column text-24px">
+								<span class=" weight-bold" style=""><i class="euro sign icon"></i>3.200</span>
+								<img src="assets/abn-amro-logo.png" alt="" class="height-82 pull-over layer-1 pull-up x3" style="float:right; opacity: .05">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui grid">
+				<div class="row mt-18">
+					<div class="column">
+						<div class="ui button materialize-1 bg-basic-1 hover popopo">Betaalverzoek</div>
+						<div class="ui  popup pull-over layer-3" data-content="betaalVerzoek" style="position:relative!important;font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;">
+							<div class="header">
+								<div class="ui grid">
+									<div class="row">
+										<div class="column">
+											<h3>Betaalverzoek</h3>
+											<div class="ui divider mb-12"></div>
+											<label for="">Amount: </label><input type="number" name="quantity" min="0.01" max="99999999" class="br-4 p-6 mb-18 max-width-82">
+											<div class="bg-basic-1 width-300">
+												<p class="text-14px weight-bold">Made available by:</p>
+												<img src="assets/tikkie-app-logo%20(1).png" alt="" class="height-42 pull-up x2c" style="float:right">
+											</div>
+											<p class="text-14px">Send to:</p>
+											<div class="ui middle aligned selection list">
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">Helen</div>
+													</div>
+												</div>
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">Christian</div>
+													</div>
+												</div>
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">Daniel</div>
+													</div>
+												</div>
+												<p class="text-14px mt-12">Send to IBAN:</p>
+												<input type="text" name="" id="" placeholder="IBAN" class="p-6 br-4">
+												<div class="ui button green" style="float:right">Send!</div>
+												<p class="text-14px mt-12">Send with Whatsapp or Facebook:</p>
+												<img src="assets/whatsapp.png" alt="" class="height-48">
+												<img src="assets/facebook_logos_PNG19761.png" alt="" class="height-48">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui button materialize-1 bg-basic-1 hover popopo-right" style="float:right">Overschrijven</div>
+						<div class="ui popup pull-over layer-4 ml-36" data-content="overSchrijven" style="position:relative;font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;">
+							<div class="header">
+								<div class="ui grid">
+									<div class="row">
+										<div class="column">
+											<h3>Overschrijven</h3>
+											<div class="ui divider mb-12"></div>
+											<label for="">Amount: </label><input type="number" name="quantity" min="0.01" max="99999999" class="br-4 p-6 mb-18 max-width-82">
+											<div class="bg-basic-1 width-300">
+												<p class="text-14px weight-bold">Made available by:</p>
+												<img src="assets/tikkie-app-logo%20(1).png" alt="" class="height-42 pull-up x2c" style="float:right">
+											</div>
+											<p class="text-14px">Send to:</p>
+											<div class="ui middle aligned selection list">
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">
+															ING <span class="ml-36">- </span><span class="ml-36 text-14px">3200,-</span>
+														</div>
+													</div>
+												</div>
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">
+															SNS <span class="ml-36">- </span><span class="ml-36 text-14px">3200,-</span>
+														</div>
+													</div>
+												</div>
+												<p class="text-14px mt-12">Send to IBAN:</p>
+												<input type="text" name="" id="" placeholder="IBAN" class="p-6 br-4">
+												<div class="ui button green" style="float:right">Send!</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-b height-112 m--64">
+			</div>
+		</div>
+	</div>
+
+	<div class="six wide computer sixteen wide mobile stretched column dashboardColumn mb-48">
+		<div class="p-18 bg-basic-1 materialize-1 text-18px" style="overflow: hidden;">
+			<h3>ING</h3>
+			<div class="statistic">
+				<div class="value">
+					<div class="ui grid">
+						<div class="row">
+							<div class="ten wide column">
+								Netto Balance:
+							</div>
+							<div class="six wide column text-24px">
+								<span class=" weight-bold" style=""><i class="euro sign icon"></i>3.200</span>
+								<img src="assets/ING_lion.png" alt="" class="height-82 pull-over layer-1 pull-up x3" style="float:right; opacity: .05">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui grid">
+				<div class="row mt-18">
+					<div class="column">
+						<div class="ui button materialize-1 bg-basic-1 hover popopo">Betaalverzoek</div>
+						<div class="ui  popup pull-over layer-3" data-content="betaalVerzoek" style="position:relative!important;font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;">
+							<div class="header">
+								<div class="ui grid">
+									<div class="row">
+										<div class="column">
+											<h3>Betaalverzoek</h3>
+											<div class="ui divider mb-12"></div>
+											<label for="">Amount: </label><input type="number" name="quantity" min="0.01" max="99999999" class="br-4 p-6 mb-18 max-width-82">
+											<div class="bg-basic-1 width-300">
+												<p class="text-14px weight-bold">Made available by:</p>
+												<img src="assets/tikkie-app-logo%20(1).png" alt="" class="height-42 pull-up x2c" style="float:right">
+											</div>
+											<p class="text-14px">Send to:</p>
+											<div class="ui middle aligned selection list">
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">Helen</div>
+													</div>
+												</div>
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">Christian</div>
+													</div>
+												</div>
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">Daniel</div>
+													</div>
+												</div>
+												<p class="text-14px mt-12">Send to IBAN:</p>
+												<input type="text" name="" id="" placeholder="IBAN" class="p-6 br-4">
+												<div class="ui button green" style="float:right">Send!</div>
+												<p class="text-14px mt-12">Send with Whatsapp or Facebook:</p>
+												<img src="assets/whatsapp.png" alt="" class="height-48">
+												<img src="assets/facebook_logos_PNG19761.png" alt="" class="height-48">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui button materialize-1 bg-basic-1 hover popopo-right" style="float:right">Overschrijven</div>
+						<div class="ui popup pull-over layer-4 ml-36" data-content="overSchrijven" style="position:relative;font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;">
+							<div class="header">
+								<div class="ui grid">
+									<div class="row">
+										<div class="column">
+											<h3>Overschrijven</h3>
+											<div class="ui divider mb-12"></div>
+											<label for="">Amount: </label><input type="number" name="quantity" min="0.01" max="99999999" class="br-4 p-6 mb-18 max-width-82">
+											<div class="bg-basic-1 width-300">
+												<p class="text-14px weight-bold">Made available by:</p>
+												<img src="assets/tikkie-app-logo%20(1).png" alt="" class="height-42 pull-up x2c" style="float:right">
+											</div>
+											<p class="text-14px">Send to:</p>
+											<div class="ui middle aligned selection list">
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">
+															ING <span class="ml-36">- </span><span class="ml-36 text-14px">3200,-</span>
+														</div>
+													</div>
+												</div>
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">
+															SNS <span class="ml-36">- </span><span class="ml-36 text-14px">3200,-</span>
+														</div>
+													</div>
+												</div>
+												<p class="text-14px mt-12">Send to IBAN:</p>
+												<input type="text" name="" id="" placeholder="IBAN" class="p-6 br-4">
+												<div class="ui button green" style="float:right">Send!</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-or height-112 m--64">
+			</div>
+		</div>
+	</div>
+
+	<div class="six wide computer sixteen wide mobile stretched column dashboardColumn mb-48">
+		<div class="p-18 bg-basic-1 materialize-1 text-18px" style="overflow: hidden;">
+			<h3>SNS</h3>
+			<div class="statistic">
+				<div class="value">
+					<div class="ui grid">
+						<div class="row">
+							<div class="ten wide column">
+								Netto Balance:
+							</div>
+							<div class="six wide column text-24px">
+								<span class=" weight-bold" style=""><i class="euro sign icon"></i>-3.200</span>
+								<img src="assets/sns_logo.png" alt="" class="height-82 pull-over layer-1 pull-up x3" style="float:right; opacity: .05">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui grid">
+				<div class="row mt-18">
+					<div class="column">
+						<div class="ui button materialize-1 bg-basic-1 hover popopo">Betaalverzoek</div>
+						<div class="ui  popup pull-over layer-3" data-content="betaalVerzoek" style="position:relative!important;font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;">
+							<div class="header">
+								<div class="ui grid">
+									<div class="row">
+										<div class="column">
+											<h3>Betaalverzoek</h3>
+											<div class="ui divider mb-12"></div>
+											<label for="">Amount: </label><input type="number" name="quantity" min="0.01" max="99999999" class="br-4 p-6 mb-18 max-width-82">
+											<div class="bg-basic-1 width-300">
+												<p class="text-14px weight-bold">Made available by:</p>
+												<img src="assets/tikkie-app-logo%20(1).png" alt="" class="height-42 pull-up x2c" style="float:right">
+											</div>
+											<p class="text-14px">Send to:</p>
+											<div class="ui middle aligned selection list">
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">Helen</div>
+													</div>
+												</div>
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">Christian</div>
+													</div>
+												</div>
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">Daniel</div>
+													</div>
+												</div>
+												<p class="text-14px mt-12">Send to IBAN:</p>
+												<input type="text" name="" id="" placeholder="IBAN" class="p-6 br-4">
+												<div class="ui button green" style="float:right">Send!</div>
+												<p class="text-14px mt-12">Send with Whatsapp or Facebook:</p>
+												<img src="assets/whatsapp.png" alt="" class="height-48">
+												<img src="assets/facebook_logos_PNG19761.png" alt="" class="height-48">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui button materialize-1 bg-basic-1 hover popopo-right" style="float:right">Overschrijven</div>
+						<div class="ui popup pull-over layer-4 ml-36" data-content="overSchrijven" style="position:relative;font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;">
+							<div class="header">
+								<div class="ui grid">
+									<div class="row">
+										<div class="column">
+											<h3>Overschrijven</h3>
+											<div class="ui divider mb-12"></div>
+											<label for="">Amount: </label><input type="number" name="quantity" min="0.01" max="99999999" class="br-4 p-6 mb-18 max-width-82">
+											<div class="bg-basic-1 width-300">
+												<p class="text-14px weight-bold">Made available by:</p>
+												<img src="assets/tikkie-app-logo%20(1).png" alt="" class="height-42 pull-up x2c" style="float:right">
+											</div>
+											<p class="text-14px">Send to:</p>
+											<div class="ui middle aligned selection list">
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">
+															ING <span class="ml-36">- </span><span class="ml-36 text-14px">3200,-</span>
+														</div>
+													</div>
+												</div>
+												<div class="item">
+													<i class="user icon"></i>
+													<div class="content">
+														<div class="header">
+															SNS <span class="ml-36">- </span><span class="ml-36 text-14px">3200,-</span>
+														</div>
+													</div>
+												</div>
+												<p class="text-14px mt-12">Send to IBAN:</p>
+												<input type="text" name="" id="" placeholder="IBAN" class="p-6 br-4">
+												<div class="ui button green" style="float:right">Send!</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-pr height-112 m--64">
+			</div>
+		</div>
+	</div>
+
+
+	<div class="six wide computer sixteen wide mobile stretched column dashboardColumn height-112">
+		<div class="ui segment">
+			<h4>Total Balance:</h4>
+			<div class="ui grid">
+				<div class="row">
+					<div class="ten wide column">
+						<p class="text-18px weight-bold">Hr P.S. Vos </p>
+						<p class="text-16px">NL02 INGB 0000 0000 00</p>
+					</div>
+					<div class="six wide column">
+						<div class="ui tiny statistics">
+							<div class="statistic">
+								<div class="value p-6 br-2">
+									<i class="euro sign normal pr-12 icon weight-normal"></i>3.200
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ui grid container">
+	<div class="row">
+		<div class="sixteen wide computer sixteen wide mobile column">
+			<div class="ui divider"></div>
+		</div>
+	</div>
+</div>
+
+<div class="ui grid container">
+	<div class="row">
+		<div class="column text-center">
+			<h2>Connected Apps</h2>
+		</div>
+	</div>
+</div>
+
+<div class="ui grid container">
+	<div class="row">
+		<div class="column">
+			<img src="assets/tikkie-app-logo%20(1).png" class="height-82" alt="">
+		</div>
+	</div>
+</div>
+
+
+
+
 </body>
 </html>

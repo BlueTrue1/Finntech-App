@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>Title</title>
+	<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+	<script
+			src="https://code.jquery.com/jquery-3.1.1.min.js"
+			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			crossorigin="anonymous"></script>
+	<script src="../semantic/dist/semantic.min.js"></script>
+	<script src="../js/functions.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		  rel="stylesheet">
+</head>
+<body>
+
+
+<div class="ui row bg-basic-3 materialize-1">
+	<div class="sixteen wide computer six wide mobile column">
+		<div class="ui secondary pointing menu container" style="margin: 0; padding: 12px 0; border: 0;">
+			<a class="ui item text-24px">
+				Welkom Piet!
+			</a>
+			<div class="right menu">
+
+				<div class="ui item text-24px hover">
+					<div class="text-center bg-yl br-4 p-12 text-16px hover materialize-1 ui popopo" style="float:right">Upload your App!
+					</div>
+					<div class="ui  popup" data-content="something" style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;">
+						<div class="header">
+							<div class="ui grid">
+								<div class="row">
+									<div class="column">
+										<p class="text-16px width-300">Insert here your Application to add it to our database</p>
+										<label for="appName"><input id="appName" name="appName" class="text p-6" placeholder="Application Name" style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;"></label>
+										<label for="embedCode"><input id="embedCode" name="embedCode" class="text p-6 mt-12" placeholder="Embedded Code" style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif!important;"></label>
+										<button class="ui button green mt-10 width-82" style="float: right">Add!</button>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img src="../assets/ABN.png" alt="" class="height-82">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ui grid height-48 bg-b materialize-1">
+	<div class="ui container">
+		<div class="six wide computer sixteen wide mobile column">
+			<div class="ui accordion">
+				<div class="title pt-12">
+					Sign in with another account
+				</div>
+
+				<div class="content pull-over layer-1" style="overflow: visible;">
+					<form class="ui form segment">
+						<p>Tell Us About Yourself</p>
+						<div class="two fields">
+							<div class="field">
+								<label>Name</label>
+								<input placeholder="First Name" name="name" type="text">
+							</div>
+							<div class="field">
+								<label>Gender</label>
+								<select class="ui dropdown" name="gender">
+									<option value="">Gender</option>
+									<option value="male">Male</option>
+									<option value="female">Female</option>
+								</select>
+							</div>
+						</div>
+						<div class="two fields">
+							<div class="field">
+								<label>Username</label>
+								<input placeholder="Username" name="username" type="text">
+							</div>
+							<div class="field">
+								<label>Password</label>
+								<input type="password" name="password">
+							</div>
+						</div>
+						<div class="field">
+							<label>Skills</label>
+							<select name="skills" multiple="" class="ui dropdown height-96">
+								<option value="">Select Skills</option>
+								<option value="css">CSS</option>
+								<option value="html">HTML</option>
+								<option value="javascript">Javascript</option>
+								<option value="design">Graphic Design</option>
+								<option value="plumbing">Plumbing</option>
+								<option value="mech">Mechanical Engineering</option>
+								<option value="repair">Kitchen Repair</option>
+							</select>
+						</div>
+						<div class="inline field">
+							<div class="ui checkbox">
+								<input type="checkbox" name="terms">
+								<label>I agree to the terms and conditions</label>
+							</div>
+						</div>
+						<div class="ui primary submit button">Submit</div>
+						<div class="ui error message"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="ui grid mt-12 container">
+	<div class="four wide computer sixteen wide mobile column">
+		<div class="ui vertical fluid menu text-18px">
+			<a class="item" href="../index.html">
+				<i class="material-icons mr-12" style="float: left">dashboard</i>
+				<p class="text-18px ">  My Dashboard </p>
+			</a>
+			<a class="item active">
+				<i class="material-icons mr-12" style="float: left">touch_app</i>
+				<p class="text-18px weight-bold">  Apps to Connect </p>
+			</a>
+			<a class="item"  href="allApps.html">
+				<i class="material-icons mr-12" style="float: left">apps</i>
+				<p class="text-18px">  All Apps </p>
+			</a>
+		</div>
+	</div>
+	<div class="six wide computer sixteen wide mobile stretched column dashboardColumn mb-48">
+
+		<div class="ui grid container">
+			<div class="row">
+				<div class="eight wide column height-112 materialize-1 bg-basic-1 hover br-4 popopo"  style="cursor:pointer" id="funda">
+					<img src="../assets/logo-funda.png" class="height-112" alt="">
+				</div>
+				<div class="ui popup pull-over layer-3" data-content="" style="">
+					<div class="header">
+						<div class="ui grid">
+							<div class="row">
+								<div class="column">
+									<h5>Are you sure that you want to add this app to your connected apps? Funda will receive your customer data.</h5>
+									<div class="ui button red width-82" onclick="alert('You canceled the action')">No</div>
+									<div class="ui button green width-82" onclick="alert('Added to your apps')">Yess</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<div class="ui grid container">
+			<div class="row">
+				<div class="eight wide column height-112 materialize-1 bg-basic-1 hover br-4" style="cursor:pointer">
+					<img src="../assets/bkr-logo.png" class="height-64 br-16 mt-12" alt="">
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="ui grid container">
+	<div class="row">
+		<div class="sixteen wide computer sixteen wide mobile column">
+			<div class="ui divider"></div>
+		</div>
+	</div>
+</div>
+
+<div class="ui grid container">
+	<div class="row">
+		<div class="column text-center">
+			<h2>Connected Apps</h2>
+		</div>
+	</div>
+</div>
+
+<div class="ui grid container">
+	<div class="row">
+		<div class="column">
+			<img src="../assets/tikkie-app-logo%20(1).png" class="height-82" alt="">
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
