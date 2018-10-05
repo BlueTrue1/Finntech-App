@@ -7,13 +7,15 @@
 	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 	<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 	<script src="js/firebase.config.js"></script>
-	<script src="js/database_fire.js"></script>
 	<script
 			src="https://code.jquery.com/jquery-3.1.1.min.js"
 			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 			crossorigin="anonymous"></script>
+	<script src="js/database_fire.js"></script>
 	<script src="semantic/dist/semantic.min.js"></script>
 	<script src="js/functions.js"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/postRequests.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 		  rel="stylesheet">
@@ -66,7 +68,7 @@
 						</div>
 
 						<div class="content pull-over layer-1" style="overflow: visible;">
-							<form class="ui form segment">
+							<form class="ui form segment" method="post">
 								<p>Tell Us About Yourself</p>
 								<div class="two fields">
 									<div class="field">
@@ -94,12 +96,10 @@
 								</div>
 								<div class="field">
 									<label>Banks</label>
-									<select name="skills" multiple="" class="ui dropdown height-82">
+									<select name="banks" multiple="" class="ui dropdown height-82">
 										<option value="">Select Skills</option>
 										<option value="css">ABN AMRO</option>
 										<option value="html">ING</option>
-										<option value="javascript">SNS BANK</option>
-										<option value="design">VAN LANSCHOT</option>
 									</select>
 								</div>
 								<div class="inline field">
@@ -251,7 +251,7 @@
 		</div>
 	</div>
 
-	<div class="six wide computer sixteen wide mobile stretched column dashboardColumn mb-48">
+	<div class="six wide computer sixteen wide mobile stretched column dashboardColumn mb-48" id="templateAccounts">
 		<div class="p-18 bg-basic-1 materialize-1 text-18px" style="overflow: hidden;">
 			<h3>ING</h3>
 			<div class="statistic">

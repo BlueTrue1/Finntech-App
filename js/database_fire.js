@@ -19,14 +19,19 @@ function setDataForUser(userId, data) {
 
 getCollection('/users')
     .then(function (data) {
-        console.log(data)
-    });
-
-
-setDataForUser(2, {
-    accounts: {
-        ing: {
-            balance: 77
-        }
-    }
+       return buildTemplateAccounts(data)
+    }).then(function (template) {
+       $('#templateAccounts').html(template)
 });
+
+
+
+
+
+//setDataForUser(2, {
+//    accounts: {
+//        ing: {
+//            balance: 77
+//        }
+//    }
+//});
