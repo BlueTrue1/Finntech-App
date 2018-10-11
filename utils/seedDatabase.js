@@ -1,4 +1,4 @@
-var fs = require('fs');
+    var fs = require('fs');
 var json = require('./accountData.json');
 
 var newJson = {
