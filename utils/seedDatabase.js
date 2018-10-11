@@ -25,12 +25,7 @@ json.users.forEach(function (user) {
     var Province = user['Province'];
     var StreetAddress = user['StreetAddress'];
     var Zipcode = user['Zipcode'];
-    var ibanSlice = IBAN.slice(4,8);
     var Password = 12345678;
-    var Color;
-    if(ibanSlice == 'AMST')Color = '#009688';
-    else if(ibanSlice == 'SNSB')Color = '#EF6C00';
-    else if(ibanSlice == 'INGB')Color = '#7E57C2';
 
     newJson.users.push({
         username: Email,
@@ -51,16 +46,37 @@ json.users.forEach(function (user) {
         gender: Gender,
         password: Password,
         accounts: {
-            bank: {
+            'ABN': {
                 IBAN: IBAN,
-                bank: ibanSlice,
                 minimumBalance: MinimumBalance,
                 balance1September: BalanceSeptember1,
-                color: Color
+                bank: 'ABN',
+                color: '#009688',
+                img: 'assets/abn-amro-logo.png'
+            },
+            'SNS': {
+                IBAN: IBAN.replace('AMST', 'SNSB').slice(0, -5) + getRandomNumberBetween(10000, 99999),
+                minimumBalance: MinimumBalance,
+                balance1September: (BalanceSeptember1 * Math.random()).toFixed(2),
+                bank: 'SNS',
+                color: '#7E57C2',
+                img: 'assets/sns_logo.png'
+            },
+            'ING': {
+                IBAN: IBAN.replace('AMST', 'INGB').slice(0, -5) + getRandomNumberBetween(10000, 99999),
+                minimumBalance: MinimumBalance,
+                balance1September: (BalanceSeptember1 * Math.random()).toFixed(2),
+                bank: 'ING',
+                color: '#EF6C00',
+                img: 'assets/ING_lion.png'
             }
         }
     })
 });
+
+function getRandomNumberBetween(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
 
 console.log(newJson);
 fs.writeFile('../utils/new_Json.json', JSON.stringify(newJson), function(err, res){});
